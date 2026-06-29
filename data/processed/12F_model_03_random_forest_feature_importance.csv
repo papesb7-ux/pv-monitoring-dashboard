@@ -1,0 +1,8 @@
+feature,importance,importance_rank
+Global_Horizontal_Radiation,0.49839091452043843,1
+ghi_squared,0.47407627520645157,2
+hour,0.010968047044901019,3
+temperature_deviation_25,0.008876623039871554,4
+month,0.005039223992316745,5
+ghi_temperature_interaction,0.0026489161922997706,6
+daylight_flag,3.721014226183162e-12,7

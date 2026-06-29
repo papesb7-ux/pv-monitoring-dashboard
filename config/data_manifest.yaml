@@ -1,0 +1,35 @@
+﻿# data_manifest.yaml
+# Source unique de verite pour l'emplacement des fichiers de resultats pre-calcules.
+# Tous les chemins sont relatifs a la racine du projet (PV_Monitoring_Dashboard/).
+# Ces fichiers sont des ENTREES en lecture seule, produites par le notebook 02 (Colab).
+# Le dashboard ne les modifie jamais.
+
+# --- Artefacts de monitoring (Parquet) ---
+monitoring:
+  # Predictions instantanees 5 min sur la periode out-of-time 2023-2025.
+  oot_predictions: data/monitoring/model_03_random_forest_oot_predictions.parquet
+  # Monitoring quotidien agrege (energie, couverture, ecarts relatifs, rolling 7/30, flags).
+  oot_daily_monitoring: data/monitoring/model_03_random_forest_oot_daily_monitoring.parquet
+  # TABLE QUOTIDIENNE PRINCIPALE : monitoring quotidien + couche anomalie
+  # (streaks, anomaly_level entier, status code/label, action recommandee).
+  final_daily_classification: data/monitoring/model_03_random_forest_final_daily_anomaly_classification.parquet
+  # Monitoring quotidien periode de calibration 2020-2022 (contexte calibration vs OOT).
+  calibration_daily_monitoring: data/monitoring/model_03_random_forest_calibration_daily_monitoring.parquet
+
+# --- Rapports (CSV) ---
+reports:
+  thresholds: data/processed/12J_residual_monitoring_thresholds.csv
+  episodes: data/processed/12L_final_critical_anomaly_episodes.csv
+  latest_status: data/processed/12L_latest_reliable_monitoring_status.csv
+  rulebook: data/processed/12L_final_anomaly_monitoring_rulebook.csv
+  model_selection: data/processed/12H_final_model_selection_on_calibration.csv
+  oot_metrics: data/processed/12I_selected_random_forest_oot_overall_metrics.csv
+  feature_importance: data/processed/12F_model_03_random_forest_feature_importance.csv
+
+# --- Metadonnees (JSON) ---
+metadata:
+  model_registry: data/metadata/12H_selected_model_registry.json
+
+# --- Modele (joblib) — optionnel en V1 ---
+models:
+  random_forest: models/model_03_random_forest_full_training.joblib

@@ -1,0 +1,44 @@
+# =====================================================================
+# app_config.yaml
+# Paramètres généraux de l'application PV Monitoring Dashboard (V1).
+# Ce fichier est lu par le code ; ne pas coder ces valeurs en dur ailleurs.
+# =====================================================================
+
+# --- Identité de l'application ---
+app:
+  title: "PV Monitoring Dashboard"
+  version: "V1"
+  dataset_name: "DKASC"
+  site_label: "Système photovoltaïque étudié"
+
+# --- Caractéristiques générales du jeu de données ---
+dataset:
+  measurement_frequency_minutes: 5
+  period_start_year: 2009
+  period_end_year: 2025
+  training_years: "2009-2019"
+  calibration_years: "2020-2022"
+  evaluation_years: "2023-2025"
+  evaluation_label: "évaluation temporelle out-of-time post-sélection"
+
+# --- Règle de qualité des données ---
+data_quality:
+  min_daily_coverage_percent: 80
+  last_reliable_day: "2025-08-22"
+
+# --- Seuils de monitoring (5e percentile de la calibration) ---
+thresholds:
+  daily_gap_percent: -18.333
+  rolling_7d_percent: -17.259
+  rolling_30d_percent: -16.981
+
+# --- Règles de persistance (jours valides consécutifs) ---
+persistence:
+  sustained_warning_days: 3
+  persistent_critical_days: 7
+  severe_persistent_days: 30
+
+# --- Modèle retenu ---
+model:
+  selected_model_name: "Random Forest"
+  selection_note: "Sélectionné sur calibration (2020-2022) puis gelé avant l'évaluation out-of-time post-sélection."

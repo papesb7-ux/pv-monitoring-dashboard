@@ -1,0 +1,2 @@
+latest_observed_date,latest_observed_day_valid,latest_valid_monitoring_date,anomaly_level,anomaly_status_code,anomaly_status,daily_relative_gap_percent,rolling_7d_gap_percent,rolling_30d_gap_percent,rolling_7d_alert_streak_days,rolling_30d_alert_streak_days,recommended_action
+2025-08-23,False,2025-08-22,5,SEVERE_PERSISTENT,Severe persistent underperformance,-17.576264994030847,-16.503952708133404,-18.38808951857483,0,35,Escalate the technical inspection and perform root-cause analysis before model retraining.

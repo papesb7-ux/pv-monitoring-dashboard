@@ -1,0 +1,19 @@
+{
+    "selection_completed_at_utc": "2026-06-28T19:38:40.600893+00:00",
+    "selection_stage": "Calibration model selection",
+    "selection_period": "2020–2022",
+    "selection_criterion": "Minimum calibration daylight RMSE, then complete RMSE and daylight MAE",
+    "selected_model_name": "MODEL 3 — Random Forest",
+    "selected_model_artifact": "/content/drive/MyDrive/PV_Capstone/03_models/model_03_random_forest_full_training.joblib",
+    "selected_daylight_mae_kw": 0.2978089668852763,
+    "selected_daylight_rmse_kw": 0.3810558685639563,
+    "selected_daylight_r2": 0.9136206568640662,
+    "selected_complete_mae_kw": 0.1469836924162743,
+    "selected_complete_rmse_kw": 0.2675734575270319,
+    "selected_complete_r2": 0.9573725527163004,
+    "out_of_time_loaded": true,
+    "out_of_time_used": true,
+    "out_of_time_evaluation_completed": true,
+    "out_of_time_evaluation_stage": "Post-selection out-of-time temporal evaluation",
+    "out_of_time_metrics_file": "/content/drive/MyDrive/PV_Capstone/04_reports/modelling/12I_selected_random_forest_oot_overall_metrics.csv"
+}

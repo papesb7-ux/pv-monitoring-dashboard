@@ -1,0 +1,4 @@
+indicator,reference_period,threshold_method,threshold_percent,reference_observation_count,interpretation
+Daily relative energy gap,Calibration 2020–2022,5th percentile,-18.33280192276307,1059,Daily value below threshold indicates unusually negative performance.
+Rolling 7-day relative energy gap,Calibration 2020–2022,5th percentile,-17.259276292956233,1041,Rolling value below threshold indicates probable sustained underperformance.
+Rolling 30-day relative energy gap,Calibration 2020–2022,5th percentile,-16.98130385324972,1033,Rolling value below threshold indicates persistent long-term underperformance.

@@ -1,0 +1,39 @@
+# =====================================================================
+# site_metadata.yaml
+# Métadonnées physiques du système photovoltaïque (page Site & System).
+# RÈGLE : ne jamais inventer une valeur. Laisser "null" si inconnue ;
+# le code affichera "Information à compléter".
+# =====================================================================
+
+localisation:
+  site: "DKASC - Desert Knowledge Australia Solar Centre"
+  pays: "Australie"
+  ville: "Alice Springs"
+  latitude: null
+  longitude: null
+  altitude_m: null
+  fuseau_horaire: null
+  type_climat: null
+
+modules_pv:
+  fabricant: null
+  reference: null
+  technologie: null
+  puissance_unitaire_wc: null
+  nombre_modules: null
+  puissance_dc_installee_kwc: null
+  inclinaison_deg: null
+  azimut_deg: null
+  type_montage: null
+  date_mise_en_service: null
+
+onduleur:
+  fabricant: null
+  modele: null
+  nombre: null
+  puissance_ac_nominale_kw: null
+  rendement_percent: null
+  nombre_mppt: null
+  ratio_dc_ac: null
+  date_mise_en_service_ou_remplacement: null
+  
